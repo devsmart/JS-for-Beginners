@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>JavaScript for Beginners</title>
+
+    <meta name="description" content="JavaScript for Beginners">
+    <meta name="author" content="Harshana Weerasinghe (me@harshana.net)">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/highlight/styles/zenburn.css" id="highlight-theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <link rel="stylesheet" href="css/custom.css">
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides"><section id="intro" class="slide">
+<h1>JavaScript</h1>
+<p>for Beginners</p>
+<p>
+	<small>by <a href="http://about.me/harshana">Harshana Weerasinghe</a> / <a href="http://twitter.com/wmharsha">@wmharsha</a></small>
+</p>
+</section>
+<section id="client-server" class="slide">
+<h2>Client – Server ?</h2>
+
+<img src="images/client-server.GIF" />
+
+<div>
+	<small>
+http://www-personal.umich.edu/~mattkaz/history/graphics/diagram.GIF
+</small>
+</div>
+</section>
+<section>
+<section id="javascript-wiki" class="slide">
+<h2>JavaScript is ...</h2><p>An object-oriented, Async computer programming language commonly used to create interactive effects within web browsers. </p>
+<blockquote>
+<p>[wiki]</p>
+</blockquote>
+</section>
+<section id="javascript-w3schools" class="slide">
+<h2>JavaScript is ...</h2><ul>
+<li>JavaScript is the most popular programming language in the world. </li>
+<li>It is the language for HTML, for the Web, for computers, servers, laptops, tablets, smart phones, and more.</li>
+</ul>
+<blockquote>
+<p>w3schools</p>
+</blockquote>
+</section>
+<section id="javascript-douglas-crockford" class="slide">
+<h2>JavaScript is ...</h2><p><em>The World&#39;s Most Misunderstood Programming Language</em></p>
+<blockquote>
+<p>Douglas Crockford</p>
+</blockquote>
+</section>
+</section>
+<section id="why-js" class="slide">
+<h2>Why is JavaScript ?</h2><ul>
+<li><p>Dynamically typed</p>
+</li>
+<li><p>Asynchronous </p>
+</li>
+<li><p>Free</p>
+</li>
+<li><p>Platform independent, but <em>depends</em> on Browser engines</p>
+</li>
+<li><p>Supported by all major browsers</p>
+</li>
+<li><p>Syntax and semantics are simple that can. understand easily</p>
+</li>
+<li><p>No need of compilation</p>
+</li>
+<li><p>Both server side and client side</p>
+</li>
+<li><p>ECMA Scripts 5</p>
+</li>
+</ul>
+</section>
+<section id="history" class="slide">
+<h2>History</h2>
+
+
+
+<section id="history-mocha">
+
+	<strong><P>Mocha</strong></P>
+
+	<p>May, 1995</p>
+
+</section>
+
+<section id="history-live-script">
+
+	<p><strong>Mocha</strong></P>
+
+	<p>May, 1995</p>
+
+	<p>
+
+		<svg class="arrows">
+
+			<path class="a1" d="M0 0 L30 32 L60 0"></path>
+
+			<path class="a2" d="M0 20 L30 52 L60 20"></path>
+
+			<path class="a3" d="M0 40 L30 72 L60 40"></path>
+
+		</svg>
+
+	</p>
+
+	<p><strong>LiveScript</strong></P>
+
+	<p>Sep, 1995</p>
+
+</section>
+
+<section id="history-java-script">
+
+	<p><strong>Mocha</strong></P>
+
+	<p>May, 1995</p>
+
+	<p>
+
+		<svg class="arrows">
+
+			<path class="a1" d="M0 0 L30 32 L60 0"></path>
+
+			<path class="a2" d="M0 20 L30 52 L60 20"></path>
+
+			<path class="a3" d="M0 40 L30 72 L60 40"></path>
+
+		</svg>
+
+	</p>
+
+	<p><strong>LiveScript</strong></P>
+
+	<p>Sep, 1995</p>
+
+	<p>
+
+		<svg class="arrows">
+
+			<path class="a1" d="M0 0 L30 32 L60 0"></path>
+
+			<path class="a2" d="M0 20 L30 52 L60 20"></path>
+
+			<path class="a3" d="M0 40 L30 72 L60 40"></path>
+
+		</svg>
+
+	</p>
+
+	<p><strong>JavaScript</strong></P>
+
+	<p>Dec, 1995</p>
+
+</section>
+</section>
+<section id="how-to-use-js" class="slide">
+<h2>Bread board</h2><p> in HTML page </p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="actionscript"> 
+    <span class="hljs-comment">// your code goes here :)</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<h3>OR</h3><p> as a external file</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"my-file.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>my-file.js looks like</p>
+<pre><code class="lang-js"><span class="hljs-comment">//your code goes here :)</span>
+</code></pre>
+</section>
+<section id="hello-world" class="slide">
+<h2>Hello World</h2><pre><code class="lang-js">
+
+
+    alert(<span class="hljs-string">"Hello World"</span>);
+</code></pre>
+</section>
+<section id="variables" class="slide">
+<h2>Variables</h2><p>any data type : undefined, Number, String, NaN or even a function</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">var</span> name = <span class="hljs-string">"Amal"</span>;
+
+alert(<span class="hljs-string">"Hello, "</span> + name);
+</code></pre>
+<p>variable has it&#39;s own <em>Scope</em></p>
+<pre><code class="lang-js">
+<span class="hljs-comment">// Global Scope</span>
+
+<span class="hljs-keyword">var</span> globalName = <span class="hljs-string">"ECMA5"</span>; 
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testScope</span>(<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-comment">// Only available inside this function 'testScope'</span>
+
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">"JavaScript"</span>; 
+
+}
+</code></pre>
+</section>
+<section>
+<section id="variables-typeof-info" class="slide">
+<h2>typeof</h2><pre><code class="lang-js">
+<span class="hljs-keyword">var</span> myVariable ;
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable)); 
+
+myVariable = <span class="hljs-string">"Amal"</span>;
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable));
+</code></pre>
+<pre><code class="lang-js">
+myVariable = <span class="hljs-number">1</span>;
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable));
+
+myVariable = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"Amal"</span>;    
+
+}
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable));
+</code></pre>
+</section>
+<section id="variables-typeof-more" class="slide">
+<h2>typeof</h2><pre><code class="lang-js">
+<span class="hljs-keyword">var</span> myVariable ;
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable)); <span class="hljs-comment">// undefined</span>
+
+myVariable = <span class="hljs-string">"Amal"</span>;
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable)); <span class="hljs-comment">// string</span>
+</code></pre>
+<pre><code class="lang-js">
+myVariable = <span class="hljs-number">1</span>;
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable)); <span class="hljs-comment">// number</span>
+
+myVariable = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"Amal"</span>;    
+
+}
+
+alert(<span class="hljs-keyword">typeof</span>(myVariable)); <span class="hljs-comment">// function</span>
+</code></pre>
+</section>
+</section>
+<section>
+<section id="functions-info" class="slide">
+<h2>Functions</h2><ul>
+<li><p>Functions are objects</p>
+</li>
+<li><p>They have properties</p>
+</li>
+<li><p>They have methods</p>
+</li>
+<li><p>Can be copied, deleted, augmented...</p>
+</li>
+<li><p>Special feature: <em>invokable</em></p>
+</li>
+<li><p>All functions always return a value including other functions, Default is undefined.</p>
+</li>
+</ul>
+</section>
+<section id="functions-more" class="slide">
+<h2>Functions</h2><p>Simple function</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getName</span>(<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"JavaScript"</span>;
+
+}
+</code></pre>
+<p>Function expression</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">var</span> getName = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"JavaScript"</span>;
+
+}
+</code></pre>
+<p>call function </p>
+<pre><code class="lang-js">
+alert(getName());
+</code></pre>
+</section>
+<section id="functions-more-2" class="slide">
+<h2>Functions</h2><p>Nested functions</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">var</span> originalObject = {
+
+    minimum: <span class="hljs-number">50</span>,
+
+    maximum: <span class="hljs-number">100</span>,
+
+    checkNumericRange: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> value !== <span class="hljs-string">'number'</span>)
+
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+        <span class="hljs-keyword">else</span>
+
+            <span class="hljs-keyword">return</span> value &gt;= <span class="hljs-keyword">this</span>.minimum &amp;&amp; value &lt;= <span class="hljs-keyword">this</span>.maximum;
+
+    }
+
+}
+</code></pre>
+<pre><code class="lang-js">
+<span class="hljs-comment">// Check whether 10 is in the numeric range.</span>
+
+<span class="hljs-keyword">var</span> result = originalObject.checkNumericRange(<span class="hljs-number">10</span>);
+
+alert(result);
+</code></pre>
+</section>
+<section id="functions-more-3" class="slide">
+<p>Immediate functions</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">var</span> name = <span class="hljs-string">'harshana'</span>;
+
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+
+    alert(<span class="hljs-string">'hello, I am an immediate function '</span> + name);
+
+}());
+</code></pre>
+</section>
+<section id="functions-parameters" class="slide">
+<h2>Functions with parameters</h2><pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a,b</span>)</span>{
+
+    <span class="hljs-keyword">return</span> a+b;
+
+}
+
+add(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
+
+add(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
+</code></pre>
+<p>arguments</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params"></span>)</span>{
+
+    alert(<span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>]);
+
+}
+
+add(<span class="hljs-number">5</span>);
+</code></pre>
+</section>
+<section id="functions-invoke" class="slide">
+<h2>Invoking a Function with a Function Method</h2><p>call()</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">a, b</span>) </span>{
+
+    <span class="hljs-keyword">return</span> a * b;
+
+}
+
+myObject = myFunction.call(<span class="hljs-keyword">this</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>);     <span class="hljs-comment">// Will return 20</span>
+</code></pre>
+<p>apply()</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params">a, b</span>) </span>{
+
+    <span class="hljs-keyword">return</span> a * b;
+
+}
+
+myArray = [<span class="hljs-number">10</span>, <span class="hljs-number">2</span>];
+
+myObject = myFunction.call(<span class="hljs-keyword">this</span>, myArray);     <span class="hljs-comment">// Will return 20</span>
+</code></pre>
+</section>
+<section id="functions-parameters-best" class="slide">
+<h2>Parameters - Best Practices</h2><p>use JSON to avoid confusion </p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span>(<span class="hljs-params">param</span>)</span>{ 
+
+    <span class="hljs-keyword">if</span>(param &amp;&amp; param.hello) 
+
+        alert(param.hello);
+
+}
+
+test({hello:’hello’});
+</code></pre>
+</section>
+</section>
+<section id="json" class="slide">
+<h2>JSON</h2><p>JavaScript Object Notation, is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">var</span> obj = {}; <span class="hljs-comment">// create object</span>
+
+obj = {name: <span class="hljs-string">"Harshana"</span>, age: <span class="hljs-number">15</span>}; <span class="hljs-comment">// initialize with properties</span>
+
+obj.height = <span class="hljs-number">5</span>; <span class="hljs-comment">//add properties after declared</span>
+
+obj.languages = [<span class="hljs-string">"Sinhala"</span>, <span class="hljs-string">"English"</span>]; <span class="hljs-comment">//array</span>
+</code></pre>
+<p>more information <a href="http://www.json.org/">www.json.org</a></p>
+</section>
+<section id="callback" class="slide">
+<h2>Callbacks</h2><pre><code class="lang-js">
+<span class="hljs-keyword">var</span> asyncTask = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">callback</span>)</span>{
+
+    <span class="hljs-comment">//do some work like REST API Call</span>
+
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{callback(<span class="hljs-string">'result'</span>);}, <span class="hljs-number">3000</span>);
+
+}
+</code></pre>
+<pre><code class="lang-js">
+asyncTask(
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>)</span>{ alert(result);}
+
+);
+</code></pre>
+</section>
+<section id="promise" class="slide">
+<h2>Promise</h2><p>The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn&#39;t completed yet, but is expected in the future.</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">var</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+
+        setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ resolve(<span class="hljs-string">'data'</span>);}, <span class="hljs-number">3000</span>);
+
+    }
+
+);
+</code></pre>
+<pre><code class="lang-js">
+p1.then(
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>{alert(val);})
+
+  .catch(
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">reason</span>) </span>{alert(<span class="hljs-string">'Handle rejected promise ('</span>+reason+<span class="hljs-string">') here.'</span>);}
+
+);
+</code></pre>
+</section>
+<section>
+<section id="dom-info" class="slide">
+<h2>DOM</h2><p>The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents.</p>
+<blockquote>
+<p><a href="http://www.w3.org/DOM/">www.w3.org/DOM</a></p>
+</blockquote>
+</section>
+<section id="dom-more" class="slide">
+<p><img src="images/dom.PNG" alt="Dom"></p>
+</section>
+<section id="dom-events" class="slide">
+<h2>DOM Events</h2><pre><code class="lang-html">
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"demo"</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"myFunction()"</span>&gt;</span>Click me to change my text color.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"demo"</span>).style.color = <span class="hljs-string">"red"</span>;
+
+}
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>More Events visit <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">www.w3schools.com</a></p>
+</section>
+<section id="dom-events-more" class="slide">
+<h2>DOM Events</h2><pre><code class="lang-js">
+<span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"elementName"</span>);
+
+el.addEventListener(<span class="hljs-string">"click"</span>, 
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{alert(<span class="hljs-string">"you clicked on the element !"</span>)}, <span class="hljs-literal">false</span>);
+
+
+
+<span class="hljs-comment">// You can properly remove the listeners</span>
+
+ el.removeEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-keyword">this</span>, <span class="hljs-literal">false</span>);
+</code></pre>
+<h3>Legacy Internet Explorer and attachEvent</h3><pre><code class="lang-js">
+<span class="hljs-keyword">if</span> (el.addEventListener) {
+
+  el.addEventListener(<span class="hljs-string">'click'</span>, modifyText, <span class="hljs-literal">false</span>); 
+
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (el.attachEvent)  {
+
+  el.attachEvent(<span class="hljs-string">'onclick'</span>, modifyText);
+
+}
+</code></pre>
+</section>
+<section id="dom-bubbling-and-capturing" class="slide">
+<h2>Bubbling &amp; Capturing</h2><p>The event first goes down - that’s called capturing, and then bubbles up. This behavior is standartized in W3C specification.</p>
+<p><img src="images/bubbling.png" alt="Dom"></p>
+<p><img src="images/capturing.png" alt="Dom"></p>
+<p><a href="http://javascript.info/tutorial/bubbling-and-capturing">Read more and try here</a></p>
+</section>
+</section>
+<section>
+<section id="oojs-intro" class="slide">
+<h2>Object-Oriented JavaScript</h2><ul>
+<li><p><strong>JavaScript !== Java</strong></p>
+</li>
+<li><p>C-like syntax</p>
+</li>
+<li><p>So far <strong>No</strong> Classes (ECMAScript 6 introduced)</p>
+</li>
+</ul>
+</section>
+<section id="oojs-data-types" class="slide">
+<h2>Data Types</h2><ol>
+<li><p>Primitive</p>
+<ul>
+<li><p>number - <em>1, 5, 11.25, 2e+3</em></p>
+</li>
+<li><p>string - <em>&quot;a&quot;, &quot;name&quot;, &quot;0&quot;</em></p>
+</li>
+<li><p>boolean - <em>true | false</em></p>
+</li>
+<li><p>null</p>
+</li>
+<li><p>undefined</p>
+</li>
+</ul>
+</li>
+<li><p>Objects - <em>everything else</em></p>
+<ul>
+<li><p>hash tables </p>
+</li>
+<li><p>key : value</p>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="oojs-simple-object" class="slide">
+<h2>Simple Object</h2><pre><code class="lang-js">
+<span class="hljs-keyword">var</span> obj = {};
+
+obj.name = <span class="hljs-string">"Amal"</span>;
+
+obj.student = <span class="hljs-literal">true</span>;
+
+<span class="hljs-comment">//====================</span>
+
+<span class="hljs-keyword">var</span> obj = { 
+
+    student: <span class="hljs-literal">true</span> ,
+
+    isStudent: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.student; }
+
+};
+
+obj.isStudent() <span class="hljs-comment">//true</span>
+</code></pre>
+</section>
+<section id="oojs-arrays.1" class="slide">
+<h2>Arrays</h2><pre><code class="lang-js">
+<span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];
+
+a[<span class="hljs-number">0</span>];
+
+<span class="hljs-keyword">typeof</span> a; <span class="hljs-comment">//"object"</span>
+</code></pre>
+</section>
+<section id="oojs-arrays" class="slide">
+<h2>Arrays</h2><ul>
+<li><p>Arrays are objects too</p>
+</li>
+<li><p>Auto-increment properties</p>
+</li>
+<li><p>Some useful methods</p>
+</li>
+</ul>
+<p><img src="images/array-methods.png" alt="array methods"></p>
+</section>
+<section id="oojs-json" class="slide">
+<h2>JSON</h2><ul>
+<li><p>javaScript Object Notation</p>
+</li>
+<li><p>Object literals + array literals</p>
+</li>
+</ul>
+<pre><code class="lang-js">
+{
+
+    <span class="hljs-string">"num"</span>:<span class="hljs-number">1</span>, <span class="hljs-string">"str"</span>: <span class="hljs-string">"abc"</span>, <span class="hljs-string">"arr"</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
+
+}
+</code></pre>
+</section>
+</section>
+<section id="best-practices" class="slide">
+<h2>Best Practices</h2><ul>
+<li><p>use <strong>‘;’</strong> for line ending if you are minify JS Code</p>
+</li>
+<li><p>use strict mode always</p>
+</li>
+<li><p><strong>Avoid</strong> execute/evaluvate string using- eval()</p>
+</li>
+<li><p>Use === and !== Comparison</p>
+</li>
+<li><p>Don&#39;t Use new Object() </p>
+</li>
+<li><p>Never Declare Number, String, Boolean or Array  Objects</p>
+</li>
+</ul>
+</section>
+<section id="questions" class="slide">
+<h2>Questions ?</h2><p><img src="images/ask-question.png" alt="ask question"></p>
+</section>
+<section id="thank-you" class="slide">
+<h1>Thank You !</h1>
+</section></div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: Reveal.getQueryHash().transition || 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        //{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        //{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        //{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+      ]
+    });
+    </script>
+
+    <script src="js/dynamic-theme.js"></script><script src="js/custom.js"></script>
+
+  </body>
+</html>
